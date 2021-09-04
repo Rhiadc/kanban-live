@@ -6,8 +6,8 @@ defmodule Livekanban.Column do
   @foreign_key_type :binary_id
   schema "columns" do
     field :title, :string
-    field :board_id, :binary_id
-
+    belongs_to :board, Livekanban.Board
+    has_many :card, Livekanban.Card
     timestamps()
   end
 

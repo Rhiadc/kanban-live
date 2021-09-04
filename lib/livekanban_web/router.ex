@@ -17,7 +17,7 @@ defmodule LivekanbanWeb.Router do
   scope "/", LivekanbanWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
+    get "/boards/:id", BoardController, :show
   end
 
   # Other scopes may use custom stacks.

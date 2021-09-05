@@ -21,9 +21,10 @@ defmodule LivekanbanWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", LivekanbanWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", LivekanbanWeb do
+    pipe_through :api
+
+  end
 
   # Enables LiveDashboard only for development
   #

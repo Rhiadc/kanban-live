@@ -12,7 +12,9 @@
         <div class="column" data-column-id="<%= column.id %>">
         &nbsp;
         <%= for card <- column.card do %>
-          <div data-card-id="<%= card.id %>" class="task alert alert-success" role="alert"><%= card.content %></div>
+          <div data-card-id="<%= card.id %>" class="task alert alert-success" role="alert">
+            <textarea phx-blur="update_card" phx-value-card="<%= card.id %>"><%= card.content %></textarea>
+          </div>
           <% end %>
           <div>
             <button phx-click="add_card" phx-value-column="<%= column.id %>">Add card</button>
